@@ -5,6 +5,7 @@ An interactive, high-performance 3D physics simulation and analytical tool explo
 ---
 
 ## Dashboard Preview
+`
 +---------------------------------------------------------------------------------+
 |                                 APPLICATION DASHBOARD                           |
 +-------------------------------+-------------------------------------------------+
@@ -20,7 +21,7 @@ An interactive, high-performance 3D physics simulation and analytical tool explo
 |                               |       ( \ * / )       |  Flip Count: 4          |
 |                               |        (  X  )        |  Measured T: 4.12s      |
 +-------------------------------+-----------------------+-------------------------+
-
+`
 > *Replace this block with a complete window capture showing the program executing a flip on Axis 2.*
 ---
 
