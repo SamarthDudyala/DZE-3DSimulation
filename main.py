@@ -7,8 +7,9 @@ import numpy
 import scipy
 import matplotlib
 
-#3D Graphics
+#3D Graphics & GUI
 import vpython 
+import tkinter
 
 #Data Management
 import json
