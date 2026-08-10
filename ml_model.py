@@ -2,7 +2,6 @@
 ml_model.py
 -----------
 A small feed-forward neural network implemented from scratch with numpy only
-(no scikit-learn, per the project's library constraint).
 
 It has two output heads trained jointly:
   - classification head: will this configuration exhibit intermediate-axis
@@ -60,7 +59,7 @@ class FlipPredictorNet:
         self.y_reg_mean = 0.0
         self.y_reg_std = 1.0
 
-    # ---- activation functions -----------------------------------------------------
+    #activation functions
 
     @staticmethod
     def _relu(z):
@@ -75,7 +74,7 @@ class FlipPredictorNet:
         z = np.clip(z, -30, 30)
         return 1.0 / (1.0 + np.exp(-z))
 
-    # ---- forward / backward -----------------------------------------------------
+    #forward / backward
 
     def _normalize_x(self, X):
         return (X - self.x_mean) / self.x_std
@@ -159,7 +158,7 @@ class FlipPredictorNet:
             dW1 = X.T @ dz1
             db1 = dz1.sum(axis=0)
 
-            # --- gradient descent update ---
+            #gradient descent update
             self.W2_cls -= lr * dW2_cls
             self.b2_cls -= lr * db2_cls
             self.W2_reg -= lr * dW2_reg
@@ -177,7 +176,7 @@ class FlipPredictorNet:
 
         return history
 
-    # ---- persistence (JSON only, per library constraints) -----------------------
+    #persistence (JSON only, per library constraints)
 
     def to_dict(self):
         return {
