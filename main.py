@@ -1,15 +1,7 @@
-#basic management libraries
 import sys
-import time
 
-#Mathematical Calculations based libraries
-import numpy
-import scipy
-import matplotlib
+from gui_app import main
 
-#3D Graphics & GUI
-import vpython 
-import tkinter
 
-#Data Management
-import json
+if __name__ == "__main__":
+    sys.exit(main() or 0)
